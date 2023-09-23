@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 24px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    margin: 0 auto;
+    background-color: rgb(60, 60, 60);
+    max-width: 600px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #005f6b;
+  }
+  #results {
+    margin-top: 24px;
+  }
