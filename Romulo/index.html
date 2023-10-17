@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/css/login-register.css">
+</head>
+<body>
+  
+ <!-- Sección de Formulario de inicio de sesión -->
+  <div class="login-container login">
+    <!-- Logo de la aplicación -->
+    <div class="logo">
+      <img src="/img/logo.png" alt="Logo de tu aplicación">
+    </div>
+    <h2>Iniciar Sesión</h2>
+    <!-- Formulario de inicio de sesión -->
+    <form id="login-form" onsubmit="return validarEmail()">
+      <input type="email" id="emailInput" placeholder="Correo electrónico" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit" onclick="redirectToDashboard()" id="sign-in">Iniciar Sesión</button>
+    </form>
+    <!-- Enlace para registrarse si no tiene una cuenta -->
+    <p>¿No tienes una cuenta? <button type="submit" id="sign-up">Registrarse</button></p>
+  </div>
+
+ <!-- Sección de Formulario de registro -->
+  <div class="login-container register hide">
+    <!-- Logo de la aplicación (mismo logo que la sección de inicio de sesión) -->
+    <div class="logo">
+      <img src="/img/logo.png" alt="Logo uleam"> 
+    </div>
+    <h2>Registrarse</h2>
+    <!-- Formulario de registro -->
+    <form id="registro-form">
+      <input type="email" id="registroEmailInput" placeholder="Correo electrónico" required oninput="validarEmail('registroEmailInput')">
+      <p id="resultadoEmail" class="text-danger"></p>
+      
+      <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required oninput="validarContrasena()">
+      <p id="resultadoContrasena" class="text-danger"></p>
+      
+      <input type="password" class="form-control" id="confirmarContrasena" placeholder="Confirmar contraseña" required oninput="verificarContrasenas()">
+      <p id="mensajeContrasenas" class="text-danger"></p>
+     
+      <button type="submit" id="registerinit" onclick="return validarEmail() && validarContrasena() && verificarContrasenas()">Registrarse</button>
+    </form>
+    
+    <!-- Enlace para iniciar sesión si ya tiene una cuenta -->
+    <p>¿Ya tienes una cuenta? <button type="button" id="btn-signin-back">Iniciar Sesión</button></p>
+  </div>
+
+  <!-- Inclusión de scripts JavaScript -->
+  <script src="/js/script-sign.js"></script>
+  <script src="/js/ScriptsGlobales.js"></script>
+
+</body>
+</html>
